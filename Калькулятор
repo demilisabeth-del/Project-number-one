@@ -1,0 +1,143 @@
+[Калькулятор.ipynb](https://github.com/user-attachments/files/25413886/default.ipynb)
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "ace9d902-c145-4a17-8061-d78a1e25d6bd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Добро пожаловать в калькулятор!\n",
+      "Выберите арифметические символы\n",
+      "1. Сложение (+)\n",
+      "2. Вычетание (-)\n",
+      "3. Умножение (*)\n",
+      "4. Деление (/)\n",
+      "5. Выйти\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Добро пожаловать в калькулятор!\")\n",
+    "print(\"Выберите арифметические символы\")\n",
+    "print(\"1. Сложение (+)\")\n",
+    "print(\"2. Вычетание (-)\")\n",
+    "print(\"3. Умножение (*)\")\n",
+    "print(\"4. Деление (/)\")\n",
+    "print(\"5. Выйти\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "15911eaf-077f-4f4f-babb-e7a66728be61",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Введите первое число:  5\n",
+      "Введите номер действия (1/2/3/4/5):  4\n",
+      "Введите второе число:  0\n"
+     ]
+    }
+   ],
+   "source": [
+    "num1 = input(\"Введите первое число: \")\n",
+    "\n",
+    "choice = input(\"Введите номер действия (1/2/3/4/5): \")\n",
+    "\n",
+    "num2 = input(\"Введите второе число: \")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "a43a018d-b6e3-4d94-af09-de4e6970a32b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "try:\n",
+    "    num1 = float(num1)\n",
+    "    num2 = float(num2)\n",
+    "except ValueError:\n",
+    "    print(\"Ошибка: нужно вводить числа!\")\n",
+    "    exit()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "06adbe5e-a25e-44c2-b73e-33224dba5c24",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ошибка: на ноль делить нельзя!\n"
+     ]
+    }
+   ],
+   "source": [
+    "if choice == \"1\":\n",
+    "    result = num1 + num2\n",
+    "    print(f\"Результат сложения: {result}\")\n",
+    "    \n",
+    "if choice == \"2\":\n",
+    "    result = num1 - num2\n",
+    "    print(f\"Результат вычитания: {result}\")\n",
+    "\n",
+    "if choice == \"3\":\n",
+    "    result = num1 * num2\n",
+    "    print(f\"Результат умножения: {result}\")\n",
+    "\n",
+    "if choice == \"4\":\n",
+    "    if num2 == 0:\n",
+    "        print(\"Ошибка: на ноль делить нельзя!\")\n",
+    "    else:\n",
+    "        result = num1 / num2\n",
+    "        print(f\"Результат деления: {result}\")\n",
+    "else:\n",
+    "      print(\"Ошибка: на ноль делить нельзя!\")\n",
+    "\n",
+    "if choice == \"5\":\n",
+    "    print(\"Всего хорошего!\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a2f8fe5f-a90c-4d0b-bcd8-d53f72ac7551",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
